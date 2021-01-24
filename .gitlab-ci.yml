@@ -1,0 +1,37 @@
+image: java:8
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - .gradle/wrapper
+    - .gradle/caches
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  # Enable the usage of sources over https
+  #- apt-get update -yqq
+  #- apt-get install apt-transport-https -yqq
+  # Log the java version
+  - java -version
+
+build:
+  stage: build
+  script:
+    - chmod +x gradlew
+    - ./gradlew setupCIWorkspace build
+  artifacts:
+    paths:
+      - 1.10.2/build/libs/
+      - 1.11/build/libs/
+      - 1.12/build/libs/
+    expire_in: 1 week
+      
+deploy_job:
+  stage: deploy
+  script:
+    - chmod +x gradlew
+    - ./gradlew curseforge
+  when: manual

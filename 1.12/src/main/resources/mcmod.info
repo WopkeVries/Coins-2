@@ -1,0 +1,16 @@
+[
+{
+  "modid": "coins",
+  "name": "Coins Mod",
+  "description": "A mod that adds coins to minecraft. What else did you expect?",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://gitlab.com/ParkerMc/coins-mod",
+  "updateUrl": "",
+  "authorList": ["ParkerMc"],
+  "credits": "Kehaan for asking for this to be made.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
