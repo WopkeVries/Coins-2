@@ -16,7 +16,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 def version_major=1
 def version_minor=0
 def version_micro=3
-def version_minecraft="1.12"
+def version_minecraft="1.15.2"
 def version_forge="14.21.1.2387"
 def version_mappings="snapshot_20170624"
 def curseforge_id="307264"
